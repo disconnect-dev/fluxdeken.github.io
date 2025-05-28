@@ -1,1 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLUXDEKEN - Веб-разработка</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">FLUXDEKEN</a>
+                <nav class="nav">
+                    <a href="#services" class="nav-link">Услуги</a>
+                    <a href="#portfolio" class="nav-link">Портфолио</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="#contact" class="nav-link">Контакты</a>
+                </nav>
+                <a href="https://t.me/fluxdeken" class="cta-button" target="_blank">
+                    Связаться
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+    </header>
 
+    <div class="notification" id="notification">
+        <span>⚠️ Не тратьте время на сомнительных исполнителей!</span>
+        <button class="notification-close" id="closeNotification">×</button>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Создание сайтов и веб-разработка</h1>
+                <p>Профессиональная вёрстка, back-end разработка и выполнение лабораторных работ</p>
+                <div class="hero-buttons">
+                    <a href="https://t.me/fluxdeken" class="button button-primary" target="_blank">
+                        Начать проект
+                        <span>→</span>
+                    </a>
+                    <a href="#portfolio" class="button button-secondary">
+                        Посмотреть работы
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Мои услуги</h2>
+                <p class="section-subtitle">Полный цикл веб-разработки от идеи до реализации</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔧</div>
+                    <h3 class="feature-title">Back-end разработка</h3>
+                    <p class="feature-description">Написание серверной логики на PHP, установка на хостинг, выполнение лабораторных работ</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Frontend разработка</h3>
+                    <p class="feature-description">Качественная вёрстка с JavaScript, адаптивный дизайн для всех устройств</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">✨</div>
+                    <h3 class="feature-title">Стилизация и анимации</h3>
+                    <p class="feature-description">Современные CSS стили, плавные анимации и интерактивные элементы</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📝</div>
+                    <h3 class="feature-title">Чистый код</h3>
+                    <p class="feature-description">Структурированный HTML, оптимизированный CSS и функциональный JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Портфолио</h2>
+                <p class="section-subtitle">Примеры выполненных проектов</p>
+            </div>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <div class="slide-content">
+                                <div class="slide-tags">
+                                    <span class="tag">PHP Back-end</span>
+                                    <span class="tag">Хостинг</span>
+                                    <span class="tag">Лабораторные</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <div class="slide-content">
+                                <div class="slide-tags">
+                                    <span class="tag">Frontend JS</span>
+                                    <span class="tag">Качественная вёрстка</span>
+                                    <span class="tag">Адаптив</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <div class="slide-content">
+                                <div class="slide-tags">
+                                    <span class="tag">CSS Стили</span>
+                                    <span class="tag">Анимации</span>
+                                    <span class="tag">Движение</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                            <div class="slide-content">
+                                <div class="slide-tags">
+                                    <span class="tag">Чистый код</span>
+                                    <span class="tag">HTML + PHP</span>
+                                    <span class="tag">HTML + JS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-button" id="prevSlide">‹</button>
+                    <button class="slider-button" id="nextSlide">›</button>
+                </div>
+                <div class="slider-dots" id="sliderDots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Вопросы и ответы</h2>
+                <p class="section-subtitle">Ответы на часто задаваемые вопросы</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        За сколько выполните работу?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Лабораторные выполняются в течение 1-2 дней.<br>
+                        Задачки - несколько часов.<br>
+                        Элементы сайта (слайдеры, формы, хедеры): 1-2 дня<br>
+                        Страницы сайта и полноценные сайты - от нескольких дней до нескольких недель.
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        Какие лабораторные делаете?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Лабораторные, связанные с веб-разработкой (HTML, CSS, PHP, JS)<br>
+                        Некоторые задачи и лабораторные по C++
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        Как с вами связаться?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Используйте мой <a href="https://t.me/fluxdeken" style="color: #0ea5e9;">телеграм</a> @fluxdeken или пишите мне на почту:<br>
+                        fluxdekenreboot@gmail.com
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        Какова цена?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        1 задача: от 30₽ до 100₽<br>
+                        1 лабораторная: от 1000₽<br>
+                        (цена может быть меньше или больше)<br>
+                        Верстка, back-end, создание сайта: по договоренности.
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        Нужна ли предоплата?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Для задач и лабораторных предоплата 100%
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        Как производится оплата?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        После предоплаты и выполнения мной работы я скину вам видео/скриншоты выполненной работы.<br>
+                        Далее скидываете оставшуюся сумму и я кидаю вам все файлы вашей работы.
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        Доработки и правки?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Бесплатные доработки и правки доступны сразу после получения вами файлов (2 часа).<br>
+                        Все остальные доработки и правки платные.
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        Поможете выставить сайт на хостинг?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Да, я помогаю выставить сайт на хостинг, в том числе и GitHub Pages
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Технологии</h3>
+                    <p>HTML, CSS, PHP, JavaScript</p>
+                    <p>Адаптивная вёрстка</p>
+                    <p>Серверная разработка</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Опыт</h3>
+                    <p>2 года практического опыта в веб-разработке</p>
+                    <p>Множество выполненных проектов</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <a href="https://t.me/fluxdeken">Телеграм @fluxdeken</a>
+                    <a href="mailto:fluxdekenreboot@gmail.com">fluxdekenreboot@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FLUXDEKEN. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+	<script src="script.js"></script>
+</body>
+</html>
